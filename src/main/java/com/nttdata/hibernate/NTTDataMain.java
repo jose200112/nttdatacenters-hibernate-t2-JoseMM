@@ -149,7 +149,7 @@ public class NTTDataMain {
 		
 		log.info("Contrato con id 7: {}\n", contractById);
 		
-		log.info("Contrato cuyo cliente tiene id 2: {}", contractByCustomer);
+		log.info("Contrato cuyo cliente tiene id 3: {}", contractByCustomer);
 
 		// Crea una lista y le agrega elementos para meterla en el JSON
 		List<Object> customerList = new ArrayList<>();
