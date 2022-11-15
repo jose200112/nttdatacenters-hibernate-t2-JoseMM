@@ -3,8 +3,10 @@ package com.nttdata.hibernate.persistence;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -137,7 +139,7 @@ public class Customer extends AbstractEntity implements Serializable {
 	 * Devuelve el contrato asociado
 	 * @return contract
 	 */
-	@OneToMany(mappedBy = "customer")
+	@OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	public List<Contract> getContracts() {
 		return contractsList;
 	}
